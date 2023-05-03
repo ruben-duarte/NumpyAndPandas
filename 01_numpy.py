@@ -65,6 +65,58 @@ b[:,1,:]
 b[ : , 1, :] = [[9,9],[8,8]]
 
 
+#Initializing different types of arrays
+#All 0s matrix
+
+np.zeros(5)
+np.zeros(2,3)
+np.zeros(2,3,3,2)
+
+#all 1s matrix
+np.ones((4,2,2) ,dtype='int32')
+
+#any number it has 2 parameters :shape , value
+np.full((2,2),99, dtype='float32')
+
+#any other full like
+np.full_like(a, 4)
+
+#or the same would be
+np.full(a.shape, 4)
+
+#random decimal numbers between 0 and 1
+np.random.rand(4,2)
+np.random.rand(4,2,3)
+np.random.rand(4,2,3)
+
+np.random_sample(a.shape)
+
+#random integer values
+np.random.randint(7)
+np.random.randint(7, size = (3,3))
+np.random.randint(4,7, size = (3,3))
+
+#identity
+np.identity(3)
+
+#repeat array
+arr = np.array([1,2,3])
+r1 = np.repeat(arr, 3)
+print(r1)
+
+arr = np.array([[1,2,3]])
+r1 = np.repeat(arr, 3, axis = 0)
+print(r1)
+
+#small problem
+output = np.ones((5,5))
+z =np.zeros((3,3))
+z[1,1] = 9
+
+output[1:4,1:4] = z
+output[1:-1,1:-1] = z
+
+
 
 
 
